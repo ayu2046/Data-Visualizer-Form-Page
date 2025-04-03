@@ -1,0 +1,235 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0e0a47;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: white;
+}
+
+/* Navbar Styling */
+#navbar {
+    background-color: rgba(8, 1, 40, 0.6);
+    text-align: center;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#navbar ul li {
+    padding: 15px 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#navbar ul li a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    #navbar ul li {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* Glassmorphism Card Wrapper */
+.card-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 300px;
+    border: 2px solid #ffffff30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    color: white;
+    padding: 10px 25px;
+}
+
+.hero-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2.5rem;
+    margin-left:7rem;
+    margin-right: 7rem;
+}
+.hero-image{
+
+}
+img{
+    width: 290px;
+    height: 240px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.heading-sectionh2{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #ffcc00;
+}
+.heading-sectionh3{
+    font-size: 0.8rem;
+    text-align: center;
+    color: #e4e2dcd8;
+    font-style: italic;
+}
+
+/* Form Styling */
+form {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid #ffffff30;
+}
+
+/* Input Fields */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="url"], 
+input[type="date"], 
+input[type="time"], 
+input[type="file"], 
+select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ccc;
+    color: white;
+}
+
+input:focus {
+    background-color: rgba(0, 141, 217, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+.btn-greet, .btn-share, input[type="submit"], input[type="reset"] {
+    border: 2px solid violet;
+    text-align: center;
+    margin: 10px auto;
+    padding: 12px;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(129, 129, 209), rgb(90, 90, 190));
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background: linear-gradient(90deg, rgb(90, 90, 190), rgb(50, 50, 150));
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #ffffff59;
+    width: 500px;
+    scale: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1;
+    padding: 20px 25px;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.active {
+    scale: 1;
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgba(95, 95, 95, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.overlayactive {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .card-wrapper {
+        max-width: 250px;
+        width: 300px;
+    }
+    .modal {
+        width: 65vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-wrapper {
+        position: static;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 0 12px;
+        padding: 0 10px;
+    }
+    .modal {
+        width: 80vw;
+    }
+}

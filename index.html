@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Application Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script>
+
+    </head>
+    <body>
+        <!-- Header -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="index.html">Apply Now</a></li>
+            </ul>
+        </nav>
+
+        <!-- Form -->
+        <form action="" id="questions" method="post" name="questions">
+            <h1>Fill your application form</h1>
+            <label for="name">Enter Your Name: </label>
+            <input type="text" id="name" name="name" required/> 
+            <label for="email">Enter Your Email: </label>
+            <input type="email" id="email" name="email" required/>
+            <label for="website">Enter the URL for website: </label>
+            <input type="url" id="website" name="website"/> 
+            <label for="mobile">Enter your mobile number: </label>
+            <input type="tel" id="mobile" name="mobile" /> 
+            <label for="birthday">Enter your birthday: </label>
+            <input type="date" id="birthday" name="birthday"/> 
+            <label for="birthtime">Enter your birth time: </label>
+            <input type="time" name="birthtime" id="birthtime"> 
+        
+            <!-- Radio Buttons -->
+             <fieldset>
+                <legend>
+                    Are you eligible to vote?
+                </legend>
+                <input type="radio" name="adulthood" value="Yes" id="adult"> <label for="adult">Yes</label>
+                <input type="radio" name="adulthood" value="No" id="minor" checked> <label for="minor">No</label>
+             </fieldset>
+
+            <!-- Check Boxes -->
+             <fieldset>
+                <legend>
+                    What programming languages you are familiar with?
+                </legend>
+                <input type="checkbox" name="cpp" id="cpp">
+                <label for="cpp">C/C++</label>
+                <input type="checkbox" name="java" id="java" checked>
+                <label for="java">Java</label>
+                <input type="checkbox" name="python" id="python">
+                <label for="python">Python</label>
+             </fieldset>
+
+             <!-- Drop Down Menu -->
+              <label for="country">Where are you from?</label>
+              <select name="country" id="country">
+                <option value="India">India</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Israel">Israel</option>
+              </select>
+
+              <!-- File  -->
+              <label for="resume">Upload your resume: </label>
+              <input type="file" id="resume" name="resume" accept="application/pdf, image/*"> 
+
+            <input type="submit" value="Submit Answers"> 
+            <input type="reset" value="Reset Form">
+        </form>
+    </body>
+</html>
